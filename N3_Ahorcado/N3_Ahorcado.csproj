@@ -51,6 +51,11 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modelo\EstadoJuego.cs" />
+    <Compile Include="Modelo\JuegoAhorcado.cs" />
+    <Compile Include="Modelo\JuegoAhorcadoConstantes.cs" />
+    <Compile Include="Modelo\Letra.cs" />
+    <Compile Include="Modelo\Palabra.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
