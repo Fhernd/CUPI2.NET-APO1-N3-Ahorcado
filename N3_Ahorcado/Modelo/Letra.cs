@@ -38,7 +38,7 @@ namespace N3_Ahorcado.Modelo
             {
                 igual = true;
             }
-            else if (Caracter >= 97 && ((letra.Caracter - 32) == letra.Caracter))
+            else if (Caracter >= 97 && ((Caracter - 32) == letra.Caracter))
             {
                 igual = true;
             }

@@ -26,7 +26,7 @@ namespace N3_Ahorcado.Modelo
 
             for (int i = 0; i < palabra.Length; ++i)
             {
-                m_letras.Add(palabra[i]);
+                m_letras.Add(new Letra(palabra[i]));
             }
         }
         #endregion
@@ -66,12 +66,14 @@ namespace N3_Ahorcado.Modelo
 
                 if (!BuscarLetraEnVector(l, jugadas))
                 {
-                    visibles.Add(new Letra(' '));
+                    visibles.Add(new Letra('_'));
                 }
                 else
                 {
                     visibles.Add(l);
                 }
+
+                ++contador;
             }
 
             return visibles;

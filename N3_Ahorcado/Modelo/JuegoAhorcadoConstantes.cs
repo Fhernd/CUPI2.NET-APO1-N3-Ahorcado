@@ -1,6 +1,6 @@
 ﻿namespace N3_Ahorcado.Modelo
 {
-    public enum JuegoAhoracadoConstantes
+    public enum JuegoAhorcadoConstantes
     {
         MaximoIntentos = 6,
         NoIniciado = -1, 

@@ -45,11 +45,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="GUI\ControlAhorcado.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ControlAhorcado.Designer.cs">
+      <DependentUpon>ControlAhorcado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ControlOperaciones.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ControlOperaciones.Designer.cs">
+      <DependentUpon>ControlOperaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Principal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="GUI\Principal.Designer.cs">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ControlLetras.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ControlLetras.Designer.cs">
+      <DependentUpon>ControlLetras.cs</DependentUpon>
     </Compile>
     <Compile Include="Modelo\EstadoJuego.cs" />
     <Compile Include="Modelo\JuegoAhorcado.cs" />
@@ -58,6 +76,18 @@
     <Compile Include="Modelo\Palabra.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\ControlAhorcado.resx">
+      <DependentUpon>ControlAhorcado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ControlLetras.resx">
+      <DependentUpon>ControlLetras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ControlOperaciones.resx">
+      <DependentUpon>ControlOperaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Principal.resx">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -66,6 +96,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -79,6 +110,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\quedan0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\quedan1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\quedan2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\quedan3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\quedan4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\quedan5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\quedan6.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

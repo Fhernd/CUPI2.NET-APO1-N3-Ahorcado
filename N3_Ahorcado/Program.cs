@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using N3_Ahorcado.GUI;
 
 namespace N3_Ahorcado
 {
@@ -16,7 +17,7 @@ namespace N3_Ahorcado
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new Principal());
         }
     }
 }
