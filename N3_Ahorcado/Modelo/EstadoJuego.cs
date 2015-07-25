@@ -1,5 +1,26 @@
-﻿namespace N3_Ahorcado.Modelo
+﻿// ===++===
+//
+//	OrtizOL - xCSw
+//
+//  Proyecto: Cupi2.NET
+//
+// ===--===
+/*============================================================
+//
+// Enumeración(s): EstadoJuego.
+//
+// Propósito: Implementar y representar la enumeración 
+// EstadoJuego del dominio.
+//
+// Original: N/D.
+//
+============================================================*/
+
+namespace N3_Ahorcado.Modelo
 {
+    /// <summary>
+    /// Especifica el estado del juego.
+    /// </summary>
     public enum EstadoJuego
     {
         Ahorcado = 2, 

@@ -132,6 +132,12 @@
   <ItemGroup>
     <None Include="Resources\quedan6.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hangman_icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ahorcado_icon.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

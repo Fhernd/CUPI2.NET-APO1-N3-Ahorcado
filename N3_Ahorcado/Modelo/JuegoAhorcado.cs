@@ -1,23 +1,58 @@
-﻿using System;
+﻿// ===++===
+//
+//	OrtizOL - xCSw
+//
+//  Proyecto: Cupi2.NET
+//
+// ===--===
+/*============================================================
+//
+// Clase(s): JuegoAhorcado.
+//
+// Propósito: Implementar y representar la entidad 
+// JuegoAhorcado del mundo del problema.
+//
+// Original: http://cupi2.uniandes.edu.co/sitio/index.php/cursos/apo1/nivel-3/ahorcado/visualizacion-de-codigo/juegoahorcado
+//
+============================================================*/
+
+using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace N3_Ahorcado.Modelo
 {
+    /// <summary>
+    /// Clase que representa la entidad JuegoAhorcado.
+    /// </summary>
     public class JuegoAhorcado
     {
         #region Campos
+        /// <summary>
+        /// Diccionario de palabras.
+        /// </summary>
         private Palabra[] m_diccionario;
+        /// <summary>
+        /// Palabra actual en juego.
+        /// </summary>
         private Palabra m_actual;
+        /// <summary>
+        /// Letras jugadas.
+        /// </summary>
         private ArrayList m_jugadas;
+        /// <summary>
+        /// Intentos disponibles en el juego.
+        /// </summary>
         private Int16 m_intentosDisponibles;
+        /// <summary>
+        /// Estado del juego.
+        /// </summary>
         private EstadoJuego m_estado;
         #endregion
 
         #region Propiedades
+        /// <summary>
+        /// Obtiene el estado del juego.
+        /// </summary>
         public EstadoJuego Estado
         {
             get
@@ -25,7 +60,9 @@ namespace N3_Ahorcado.Modelo
                 return m_estado;
             }
         }
-
+        /// <summary>
+        /// Obtiene los intentos disponibles en el juego.
+        /// </summary>
         public Int16 IntentosDisponibles
         {
             get
@@ -33,7 +70,9 @@ namespace N3_Ahorcado.Modelo
                 return m_intentosDisponibles;
             }
         }
-
+        /// <summary>
+        /// Obtiene las letras jugadas hasta el momento.
+        /// </summary>
         public ArrayList Jugadas
         {
             get
@@ -41,7 +80,9 @@ namespace N3_Ahorcado.Modelo
                 return m_jugadas;
             }
         }
-
+        /// <summary>
+        /// Obtiene las ocurrencias de letras.
+        /// </summary>
         public ArrayList Ocurrencias
         {
             get
@@ -49,7 +90,9 @@ namespace N3_Ahorcado.Modelo
                 return m_actual.GenerarOcurrencias(m_jugadas);
             }
         }
-
+        /// <summary>
+        /// Obtiene la palabra actual en juego.
+        /// </summary>
         public Palabra PalabraActual
         {
             get
@@ -60,6 +103,9 @@ namespace N3_Ahorcado.Modelo
         #endregion
 
         #region Constructores
+        /// <summary>
+        /// Inicializa una instancia de la clase JuegoAhorcado.
+        /// </summary>
         public JuegoAhorcado()
         {
             m_diccionario = new Palabra[(int)JuegoAhorcadoConstantes.TotalPalabras];
@@ -83,11 +129,17 @@ namespace N3_Ahorcado.Modelo
         #endregion
 
         #region Métodos
+        /// <summary>
+        /// Genera un valor aleatorio para la selección de la palabra.
+        /// </summary>
+        /// <returns></returns>
         private double GenerarValor()
         {
             return new Random().NextDouble();
         }
-
+        /// <summary>
+        /// Inicia un nuevo juego.
+        /// </summary>
         public void IniciarJuego()
         {
             double pos = GenerarValor() * (int)JuegoAhorcadoConstantes.TotalPalabras;
@@ -102,7 +154,11 @@ namespace N3_Ahorcado.Modelo
             // Actualizaci[on del estado del juego: 
             m_estado = EstadoJuego.Jugando;
         }
-
+        /// <summary>
+        /// Juega una letra específica.
+        /// </summary>
+        /// <param name="letra">Letra a jugar.</param>
+        /// <returns><em>true</em> si la letra pertenece a la palbra; <em>false</em> en caso contrario.</returns>
         public bool JugarLetra(Letra letra)
         {
             if (m_estado != EstadoJuego.Jugando)
@@ -134,6 +190,11 @@ namespace N3_Ahorcado.Modelo
 
             return pertenece;
         }
+        /// <summary>
+        /// Determina si la letra fue utilizada en una partida del ahorcado.
+        /// </summary>
+        /// <param name="letra">Letra a determinar si ha sido jugada.</param>
+        /// <returns><i>true</i> si la letra fue jugada; <i>false</i> en caso contrario.</returns>
         public bool LetraUtilizada(Letra letra)
         {
             bool utilizada = false;
@@ -153,6 +214,11 @@ namespace N3_Ahorcado.Modelo
 
             return utilizada;
         }
+        /// <summary>
+        /// Obtiene una palabra del diccionario.
+        /// </summary>
+        /// <param name="posicion">Posición de la palabra en el diccionario.</param>
+        /// <returns>Palabra del diccionario.</returns>
         public Palabra ObtenerPalabra(int posicion)
         {
             return m_diccionario[posicion];
@@ -160,10 +226,18 @@ namespace N3_Ahorcado.Modelo
         #endregion
 
         #region Puntos de extensión:
+        /// <summary>
+        /// Punto de extensión no. 1.
+        /// </summary>
+        /// <returns></returns>
         public String PuntoExtension1()
         {
             return "Respuesta 1";
         }
+        /// <summary>
+        /// Punto de extensión no. 2.
+        /// </summary>
+        /// <returns></returns>
         public String PuntoExtension2()
         {
             return "Respuesta 2";

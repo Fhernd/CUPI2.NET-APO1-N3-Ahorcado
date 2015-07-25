@@ -5,7 +5,7 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "N3_Ahorcado", "N3_Ahorcado\N3_Ahorcado.csproj", "{9A759015-46B0-4C53-9F8D-535CCE872BE7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "N3_AhoracadoTest", "N3_AhoracadoTest\N3_AhoracadoTest.csproj", "{6A6158E5-57CD-4E40-B74C-E79716D5F490}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "N3_AhorcadoTest", "N3_AhoracadoTest\N3_AhorcadoTest.csproj", "{6A6158E5-57CD-4E40-B74C-E79716D5F490}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

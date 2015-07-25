@@ -1,11 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿// ===++===
+//
+//	OrtizOL - xCSw
+//
+//  Proyecto: Cupi2.NET
+//
+// ===--===
+/*============================================================
+//
+// Clase(s): ControlLetras
+//
+// Propósito: Implementar y representar el control visual 
+// para las letras (A-Z) del juego.
+//
+// Original: http://cupi2.uniandes.edu.co/sitio/index.php/cursos/apo1/nivel-3/ahorcado/visualizacion-de-codigo/panelletras
+//
+============================================================*/
+
+using System;
 using System.Windows.Forms;
 
 namespace N3_Ahorcado.GUI
@@ -13,10 +24,17 @@ namespace N3_Ahorcado.GUI
     public partial class ControlLetras : UserControl
     {
         #region Campos
+        /// <summary>
+        /// Referencia al formulario principal del juego.
+        /// </summary>
         private Principal m_principal;
         #endregion
 
         #region Constructores
+        /// <summary>
+        /// Inicializa una nueva instancia de la clase ControlLetras.
+        /// </summary>
+        /// <param name="principal">Referencia al formulario principal.</param>
         public ControlLetras(Principal principal)
         {
             InitializeComponent();
@@ -28,6 +46,9 @@ namespace N3_Ahorcado.GUI
         #endregion
 
         #region Métodos
+        /// <summary>
+        /// Carga las letras (A-Z) del juego.
+        /// </summary>
         private void CargarLetras()
         {
             byte valorNumero = 65;
@@ -68,6 +89,11 @@ namespace N3_Ahorcado.GUI
         #endregion
 
         #region Eventos
+        /// <summary>
+        /// Responde al clic de uno de los botones de las letras.
+        /// </summary>
+        /// <param name="sender">Objeto generador del evento.</param>
+        /// <param name="e">Argumentos del evento.</param>
         private void ButtonClickHandler(object sender, EventArgs e)
         {
             char letra = ((Button)sender).Text.ToString()[0];

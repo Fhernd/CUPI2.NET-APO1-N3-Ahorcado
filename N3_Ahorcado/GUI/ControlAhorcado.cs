@@ -1,24 +1,46 @@
-﻿using System;
+﻿// ===++===
+//
+//	OrtizOL - xCSw
+//
+//  Proyecto: Cupi2.NET
+//
+// ===--===
+/*============================================================
+//
+// Clase(s): ControlAhorcado.
+//
+// Propósito: Implementar y representar el control visual 
+// con las figuras y letras del juego.
+//
+// Original: http://cupi2.uniandes.edu.co/sitio/index.php/cursos/apo1/nivel-3/ahorcado/visualizacion-de-codigo/panelahorcado
+//
+============================================================*/
+
+using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using N3_Ahorcado.Modelo;
 
 namespace N3_Ahorcado.GUI
 {
+    /// <summary>
+    /// Clase que representa el control visual ControlAhorcado.
+    /// </summary>
     public partial class ControlAhorcado : UserControl
     {
         #region Campos
+        /// <summary>
+        /// Referencia al formulario principal del juego.
+        /// </summary>
         private Principal m_principal;
         #endregion
 
         #region Constructores
+        /// <summary>
+        /// Inicializa una nueva instancia de la clase ControlAhorcado.
+        /// </summary>
+        /// <param name="principal">Referencia al formulario principal.</param>
         public ControlAhorcado(Principal principal)
         {
             InitializeComponent();
@@ -28,6 +50,9 @@ namespace N3_Ahorcado.GUI
         #endregion
 
         #region Métodos
+        /// <summary>
+        /// Actualiza el estado del juego.
+        /// </summary>
         public void Actualizar()
         {
             short intentosDisponibles = m_principal.IntentosDisponibles;
@@ -86,6 +111,10 @@ namespace N3_Ahorcado.GUI
                 lblMensaje.Text = "¡Ahorcado!";
             }
         }
+        /// <summary>
+        /// Etiqueta mensaje de la letra jugada por el jugador.
+        /// </summary>
+        /// <param name="mensaje">Mensaje de la etiqueta.</param>
         public void EtiquetarMensaje(string mensaje)
         {
             lblMensaje.Text = mensaje;
