@@ -21,6 +21,9 @@ using System.Windows.Forms;
 
 namespace N3_Ahorcado.GUI
 {
+    /// <summary>
+    /// Clase que representa el control visual ControlOperaciones.
+    /// </summary>
     public partial class ControlOperaciones : UserControl
     {
         #region Campos

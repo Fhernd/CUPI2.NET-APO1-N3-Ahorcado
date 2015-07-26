@@ -229,7 +229,7 @@ namespace N3_Ahorcado.Modelo
         /// <summary>
         /// Punto de extensión no. 1.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Cadena de respuesta del punto de extensión.</returns>
         public String PuntoExtension1()
         {
             return "Respuesta 1";
@@ -237,7 +237,7 @@ namespace N3_Ahorcado.Modelo
         /// <summary>
         /// Punto de extensión no. 2.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Cadena de respuesta del punto de extensión.</returns>
         public String PuntoExtension2()
         {
             return "Respuesta 2";

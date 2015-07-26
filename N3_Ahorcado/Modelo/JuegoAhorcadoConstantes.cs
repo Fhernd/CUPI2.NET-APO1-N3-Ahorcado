@@ -23,7 +23,13 @@ namespace N3_Ahorcado.Modelo
     /// </summary>
     public enum JuegoAhorcadoConstantes
     {
+        /// <summary>
+        /// Número máximo de intentos en el juego.
+        /// </summary>
         MaximoIntentos = 6,
+        /// <summary>
+        /// Total de palabras en el juego.
+        /// </summary>
         TotalPalabras = 12
     }
 }

@@ -21,6 +21,9 @@ using System.Windows.Forms;
 
 namespace N3_Ahorcado.GUI
 {
+    /// <summary>
+    /// Clase que representa el control visual ControlLetras.
+    /// </summary>
     public partial class ControlLetras : UserControl
     {
         #region Campos
